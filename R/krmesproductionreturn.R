@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' jhhrvsrcsocialsecurityUI()
+#' jhhrvsrcbillsocialsecurityUI()
 
-krmesproductionreturnsrcUI <- function(tabTitle ='生产退料单',
+krmesproductionreturnsrcbillUI <- function(tabTitle ='生产退料单',
                     colTitles =c('操作区','显示区域'),
                     widthRates =c(4, 8),
-                    func_left = buttonkrmesproductionreturnsrcUI_left,
-                    func_right =buttonkrmesproductionreturnsrcUI_right
+                    func_left = buttonkrmesproductionreturnsrcbillUI_left,
+                    func_right =buttonkrmesproductionreturnsrcbillUI_right
 ) {
 
   
@@ -34,12 +34,12 @@ krmesproductionreturnsrcUI <- function(tabTitle ='生产退料单',
 #'
 #' @examples
 #' buttonUI_left()
-buttonkrmesproductionreturnsrcUI_left <- function() {
+buttonkrmesproductionreturnsrcbillUI_left <- function() {
 
 
   res <- tagList(
 
-    shiny::actionButton(inputId = 'btn_krmesproductionreturnsrc_view' , label = '预览表单数据'),
+    shiny::actionButton(inputId = 'btn_krmesproductionreturnsrcbill_view' , label = '预览表单数据'),
 
 
   )
@@ -58,9 +58,9 @@ buttonkrmesproductionreturnsrcUI_left <- function() {
 #'
 #' @examples
 #' buttonUI_right()
-buttonkrmesproductionreturnsrcUI_right <- function() {
+buttonkrmesproductionreturnsrcbillUI_right <- function() {
   res <- tagList(
-    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesproductionreturnsrc_view_data', label = '出口'))
+    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesproductionreturnsrcbill_view_data', label = '出口'))
   )
   return(res)
 

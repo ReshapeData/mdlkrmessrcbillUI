@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' jhhrvsrcrulevoucherUI()
+#' jhhrvsrcbillrulevoucherUI()
 
-krmesprocesstransfersrcUI <- function(tabTitle ='工序转移',
+krmesprocesstransfersrcbillUI <- function(tabTitle ='工序转移',
                     colTitles =c('操作区','显示区域'),
                     widthRates =c(4, 8),
-                    func_left = buttonkrmesprocesstransfersrcUI_left,
-                    func_right =buttonkrmesprocesstransfersrcUI_right
+                    func_left = buttonkrmesprocesstransfersrcbillUI_left,
+                    func_right =buttonkrmesprocesstransfersrcbillUI_right
 ) {
 
   
@@ -34,12 +34,12 @@ krmesprocesstransfersrcUI <- function(tabTitle ='工序转移',
 #'
 #' @examples
 #' buttonUI_left()
-buttonkrmesprocesstransfersrcUI_left <- function() {
+buttonkrmesprocesstransfersrcbillUI_left <- function() {
 
 
   res <- tagList(
 
-    shiny::actionButton(inputId = 'btn_krmesprocesstransfersrc_view' , label = '预览表单数据'),
+    shiny::actionButton(inputId = 'btn_krmesprocesstransfersrcbill_view' , label = '预览表单数据'),
 
 
   )
@@ -58,9 +58,9 @@ buttonkrmesprocesstransfersrcUI_left <- function() {
 #'
 #' @examples
 #' buttonUI_right()
-buttonkrmesprocesstransfersrcUI_right <- function() {
+buttonkrmesprocesstransfersrcbillUI_right <- function() {
   res <- tagList(
-    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesprocesstransfersrc_view_data', label = '出口'))
+    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesprocesstransfersrcbill_view_data', label = '出口'))
   )
   return(res)
 
